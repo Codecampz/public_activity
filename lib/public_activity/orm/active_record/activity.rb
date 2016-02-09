@@ -1,3 +1,5 @@
+require 'nested-hstore'
+
 module PublicActivity
   module ORM
     module ActiveRecord
