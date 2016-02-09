@@ -13,8 +13,8 @@ module PublicActivity
         belongs_to :owner, :polymorphic => true
         # Define ownership to a resource targeted by this activity
         belongs_to :recipient, :polymorphic => true
-        # Serialize parameters Hash
-        serialize :parameters, Hash
+        # Serialize parameters ActiveRecord::Coders::NestedHstore
+        serialize :parameters, ActiveRecord::Coders::NestedHstore
 
         if ::ActiveRecord::VERSION::MAJOR < 4 || defined?(ProtectedAttributes)
           attr_accessible :key, :owner, :parameters, :recipient, :trackable
