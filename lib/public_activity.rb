@@ -1,5 +1,7 @@
 require 'active_support'
 require 'action_view'
+require 'nested-hstore'
+
 # +public_activity+ keeps track of changes made to models
 # and allows you to display them to the users.
 #
